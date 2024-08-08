@@ -4,7 +4,7 @@
 
 欢迎来到这个激动人心的教程!在这里,我们将探索如何在使Milk-V Duo 开发板在ST7789V显示屏上显示和在开发板上运行 LVGL(Light and Versatile Graphics Library)。LVGL 是一个强大而轻量级的图形库,广泛应用于嵌入式系统和物联网设备的用户界面开发。
 
-本教程旨在指导您完成从系统编译，硬件连接到软件配置的整个过程,最终在 Milk-V Duo 上成功运行 LVGL 演示程序。无论您是嵌入式系统开发的新手,还是寻找在 RISC-V 平台上扩展图形能力的专业人士,本教程都将为您提供宝贵的实践经验。
+本教程旨在指导您完成从系统编译，硬件连接到软件配置的整个过程,最终在 Milk-V Duo 上成功运行 LVGL 演示程序。无论您是嵌入式系统开发的新手,还是寻找在 RISC-V 平台上扩展图形能力的专业人士,本教程都将为您提供宝贵的实践经验!
 
 通过学习本教程,您将:
 
@@ -74,7 +74,7 @@
 
 3. 修改 build/boards/default/dts/cv181x/cv181x_base.dtsi
 
-   ![image-20240808220320415](https://knifefire.com/imagesimage-20240808220320415.png)
+   ![image-20240808220320415](https://raw.githubusercontent.com/jason-hue/plct/main/imagesimage-20240808220320415.png)
 
 加上`bias-pull-up;                           //上拉`
 
@@ -141,7 +141,7 @@ CONFIG_FB_TFT_SSD1306=m
 
 2. 修改屏幕参数 变量 `struct fbtft_display display` 为屏幕参数，需确认与当前使用的屏幕参数一致，主要是宽度和高度。
 
-   ![image-20240808221639989](https://knifefire.com/imagesimage-20240808221639989.png)
+   ![image-20240808221639989](https://raw.githubusercontent.com/jason-hue/plct/main/imagesimage-20240808221639989.png)
 
 3. 修改 fbtft-core 文件 位于 duo-buildroot-sdk\linux_5.10\drivers\staging\fbtft\fbtft-core.c
 
@@ -215,7 +215,7 @@ CONFIG_FB_TFT_SSD1306=m
 
    - 
 
-     ![image-20240808222145290](https://knifefire.com/imagesimage-20240808222145290.png)
+     ![image-20240808222145290](https://raw.githubusercontent.com/jason-hue/plct/main/imagesimage-20240808222145290.png)
 
 在这段代码最后加入
 
@@ -337,7 +337,7 @@ $ cat /dev/zero > /dev/fb0                //清空屏幕 出现报错 cat: write
 
    将：
 
-   ![image-20240808224023793](https://knifefire.com/imagesimage-20240808224023793.png)
+   ![image-20240808224023793](https://raw.githubusercontent.com/jason-hue/plct/main/imagesimage-20240808224023793.png)
 
 改为：
 
@@ -431,10 +431,11 @@ chmod +x demo
 
 即可在显示屏显示演示程序
 
-![Screenshot_2024-08-08-22-55-17-452_com.miui.media](https://knifefire.com/imagesScreenshot_2024-08-08-22-55-17-452_com.miui.media.jpg)
+![Screenshot_2024-08-08-22-55-17-452_com.miui.media](https://raw.githubusercontent.com/jason-hue/plct/main/imagesScreenshot_2024-08-08-22-55-17-452_com.miui.media.jpg)
 
 ### 参考文献：
 
 - [milk-v duo 交叉编译 LVGL](https://zhuanlan.zhihu.com/p/672633256)
 - [milk-v duo spi TFT 液晶屏 ST7789V 使用](https://zhuanlan.zhihu.com/p/672610362)
 - [Milk-V Duo官方文档](https://milkv.io/zh/docs/duo/resources/spilvgl)
+
