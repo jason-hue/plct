@@ -33,7 +33,7 @@
    4. 配置GPIO
    5. 通过杜邦线连接显示屏并测试
 2. 显示内核启动log配置
-3. 交叉编译LVLG 演示程序
+3. 交叉编译LVGL 演示程序
 4. 在开发板上运行演示程序
 
 ## 1. 修改设备树：
@@ -197,25 +197,10 @@ CONFIG_FB_TFT_SSD1306=m
      }
      ```
 
-   - 修改 fbtft_reset 函数编译完成后，在 build/bin 目录会生成 demo 程序
-
-     ￼
-     scp -O demo root@192.168.42.1:/root/
-     密码是 milkv。
-
-     通过串口或者 SSH 登陆到 Duo 的终端控制台：
-
-     ￼
-     ssh root@192.168.42.1
-     为 demo 程序添加可执行权限：
-
-     ￼
-     chmod +x demo
-     运行测试程序：
-
-   - 
+   - 修改 fbtft_reset 函数
 
      ![image-20240808222145290](https://raw.githubusercontent.com/jason-hue/plct/main/imagesimage-20240808222145290.png)
+     
 
 在这段代码最后加入
 
@@ -348,7 +333,7 @@ $ cat /dev/zero > /dev/fb0                //清空屏幕 出现报错 cat: write
 
 这样进入内核之后，液晶上就会显示启动日志
 
-## 7. 交叉编译LVLG 演示程序：
+## 7. 交叉编译LVGL 演示程序：
 
 1. 克隆LVGL frame buffer demo仓库：
 
