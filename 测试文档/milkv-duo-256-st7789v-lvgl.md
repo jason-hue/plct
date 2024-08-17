@@ -335,7 +335,7 @@ $ cat /dev/zero > /dev/fb0                //清空屏幕 出现报错 cat: write
 
 2. 修改 uboot 启动参数 修改u-boot-2021.10/include/configs/cv181x-asic.h
 
-   将：
+   cd将：
 
    ![image-20240808224023793](https://raw.githubusercontent.com/jason-hue/plct/main/imagesimage-20240808224023793.png)
 
