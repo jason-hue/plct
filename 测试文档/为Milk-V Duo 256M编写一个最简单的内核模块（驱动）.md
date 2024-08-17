@@ -146,3 +146,7 @@ dmesg | tail
 ## 7. 结论
 
 通过遵循本指南，您应该能够成功地为 Milk-V Duo 开发板开发、编译和测试内核模块。随着您对内核模块开发的深入了解，您可以开始探索更复杂的功能和优化技术。
+
+
+
+参考：[CSDN博客](https://blog.csdn.net/GJF712/article/details/130958786?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522172257783816800186522947%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=172257783816800186522947&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-7-130958786-null-null.142^v100^pc_search_result_base6&utm_term=milkvduo&spm=1018.2226.3001.4187)
