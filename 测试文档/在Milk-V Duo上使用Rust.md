@@ -60,7 +60,15 @@ apt-get update
 
 由于开发板为RV架构，现有代理软件无法安装，我们使用自己的主机搭建代理服务器，然后将Milk-V Duo的代理服务器设置为自己的主机(略)
 
-在Milk-V Duo上：
+临时添加代理：
+
+```bash
+export http_proxy="http://192.168.0.102:7890/"
+export https_proxy="http://192.168.0.102:7890/"
+export no_proxy="localhost,127.0.0.1"
+```
+
+永久添加代理：
 
 ```bash
 vim /etc/environment
