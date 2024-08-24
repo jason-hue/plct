@@ -59,3 +59,7 @@ void loop() {
 I在下一个教程中,我们将探索 MilkV Duo 开发板的 I2C (Inter-Integrated Circuit) 通信功能。I2C 是一种常用于连接低速外围设备的串行通信协议,在嵌入式系统中广泛应用。
 
 敬请期待！
+
+### 参考文献：
+
+https://github.com/ArielHeleneto/Work-PLCT/tree/master/duo/Arduino
