@@ -88,7 +88,18 @@ setenv gatewayip 192.168.74.1 #设置网关ip
 
 
 
+也可以通过DHCP自动获取ip：
+
+```bash
+setenv autoload no
+dhcp
+```
+
+输入`printenv ipaddr serverip netmask gatewayip`查看ip地址
+
 完成配置后，可使用 ping 命令测试当前网络连接情况：
+
+
 
 在 u-boot 命令行下输入：`ping 192.168.74.30`
 
