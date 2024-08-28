@@ -183,3 +183,11 @@ receive 1 bytes
 通过这个简单的测试,我们验证了Arduino的I2C通信功能。该程序模拟了一个I2C主设备和从设备,主设备每秒发送一个递增的值,从设备接收并通过串口输出这个值。
 
 这个测试为更复杂的I2C应用提供了基础,如与各种传感器或显示器的通信。
+
+### 下期预告：
+
+SPI测试
+
+#### 参考文献：
+
+https://github.com/ArielHeleneto/Work-PLCT/blob/master/duo/Arduino/README.md
