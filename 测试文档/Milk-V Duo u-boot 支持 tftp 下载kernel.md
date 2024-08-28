@@ -118,7 +118,7 @@ host 192.168.74.30 is alive
 在 u-boot 命令行下输入：
 
 ```bash
-tftpboot 81400000 boot.sd
+tftpboot 81800000 boot.sd
 ```
 
 如果成功就会显示：
@@ -128,22 +128,22 @@ Speed: 100, full duplex
 Using ethernet@4070000 device
 TFTP from server 192.168.74.30; our IP address is 192.168.74.252
 Filename 'boot.sd'.
-Load address: 0x81400000
+Load address: 0x81800000
 Loading: #################################################################
          #################################################################
          #################################################################
          ##
          482.4 KiB/s
 done
-Bytes transferred = 2891672 (2c1f98 hex)
+Bytes transferred = 3118460 (2f957c hex)
 ```
 
-通过 tftp 将 boot.sd 下载到内存 0x81400000 地址处，0x81400000 为 Linux Kernel 地址。
+通过 tftp 将 boot.sd 下载到内存 0x81800000 地址处，0x81800000 为 Linux Kernel 地址。
 
 如不想存储当前 boot.sd 文件至 SD 卡，运行以下命令直接在内存中运行：
 
 ```bash
-bootm 81400000#config-cv1812cp_milkv_duo256m_sd
+bootm 81800000#config-cv1812cp_milkv_duo256m_sd
 ```
 
 ##### Kernel 存储
@@ -151,10 +151,10 @@ bootm 81400000#config-cv1812cp_milkv_duo256m_sd
 将下载完成的 kernel 文件保存至 SD 卡:
 
 ```bash
-fatwrite mmc 0 81400000 boot.sd 2c1f98
+fatwrite mmc 0 81800000 boot.sd 2f957c
 ```
 
-通过 fatwrite 命令将 0x81400000 地址处大小为 0x2c1f98 大小的文件保存为 boot.sd 文件。
+通过 fatwrite 命令将 0x81800000 地址处大小为 0x2f957c 大小的文件保存为 boot.sd 文件。
 
 #### 参考文献:
 
