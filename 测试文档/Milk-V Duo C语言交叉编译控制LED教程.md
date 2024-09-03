@@ -146,3 +146,11 @@ sudo scp -O ./led root@192.168.42.1:/root/
 ## 结论
 
 通过这个教程,您已经学会了如何使用C语言进行交叉编译,并控制MilkV Duo开发板上的LED。这为您进一步开发更复杂的嵌入式应用程序奠定了基础。
+
+
+
+
+
+参考文献：
+
+https://bbs.elecfans.com/jishu_2369118_1_1.html
