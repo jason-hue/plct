@@ -40,7 +40,7 @@ cat /proc/version
 在SDK目录下创建一个 `test` 文件夹,并在其中编写 `led.c` 文件:
 
 ```c
-cCopy#include <stdlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
