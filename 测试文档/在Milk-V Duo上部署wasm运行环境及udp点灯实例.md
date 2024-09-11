@@ -426,3 +426,7 @@ echo -n "quit" | nc -u -w1 192.168.42.1 1234
 接收on、off时，Milk-V Duo上的LED将会根据指令亮灭。
 
 现在，你可以使用 c/c++ 编写你的程序，使用wasi-sdk编译为wasm，然后部署到milk-v duo上面运行了。编译出来的wasm程序，能直接放到其他部署了iwasm的硬件上，也可以运行了，也就是说，如果不是关联到特定硬件的功能，它就是通用的。
+
+##### 参考文献：
+
+https://community.milkv.io/t/duo-webassembly-udp/603
