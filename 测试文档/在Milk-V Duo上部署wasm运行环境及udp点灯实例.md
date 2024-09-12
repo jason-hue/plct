@@ -38,8 +38,8 @@ WebAssembly正在不断发展，未来可能会增加更多功能，如直接硬
 
 各工具包的下载地址：
 
-- [host-tools：预编译包 5](https://sophon-file.sophon.cn/sophon-prod-s3/drive/23/03/07/16/host-tools.tar.gz)
-- [wasi-sdk：预编译包 3](https://github.com/WebAssembly/wasi-sdk/releases)
+- [host-tools：预编译包](https://sophon-file.sophon.cn/sophon-prod-s3/drive/23/03/07/16/host-tools.tar.gz)
+- [wasi-sdk：预编译包](https://github.com/WebAssembly/wasi-sdk/releases)
 - [WAMR：wasm-micro-runtime源码](https://github.com/bytecodealliance/wasm-micro-runtime)
 
 - [ ] host-tools下载好以后，将其路径添加到PATH中，确保如下的命令可以执行：
