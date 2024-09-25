@@ -15,8 +15,8 @@ cd box64
 mkdir build
 cd build
 cmake .. -D RV64=1 -D CMAKE_BUILD_TYPE=RelWithDebInfo
-sudo make install -j$(nproc)
-
+sudo make  -j$(nproc)
+sudo make install
 ```
 
 解包wps：
