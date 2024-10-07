@@ -61,3 +61,7 @@ GOTO:EOF
 
 - 安装过程中请保持网络连接稳定
 - 如遇到问题，可以查看 Arduino 官方文档或 openKylin 社区论坛寻求帮
+
+##### 参考文献：
+
+https://docs.openkylin.top/zh/04_%E7%A4%BE%E5%8C%BA%E8%B4%A1%E7%8C%AE/%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/RISC-V%E7%89%88%E6%9C%ACArduino_IDE%E5%AE%89%E8%A3%85
