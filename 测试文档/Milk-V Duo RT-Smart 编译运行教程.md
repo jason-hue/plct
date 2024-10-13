@@ -61,7 +61,7 @@
   ```bash
   # RT-Samrt 版按照以下配置：
   $ export RTT_CC_PREFIX=riscv64-unknown-linux-musl-
-  $ export RTT_EXEC_PATH=/opt/riscv64-linux-musleabi_for_x86_64-pc-linux-gnu/bin
+  $ export RTT_EXEC_PATH=/home/knifefire/下载/riscv64-linux-musleabi_for_x86_64-pc-linux-gnu_latest/riscv64-linux-musleabi_for_x86_64-pc-linux-gnu/bin
   ```
 
   ## 2. 编译
