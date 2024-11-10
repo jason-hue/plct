@@ -51,7 +51,7 @@
 
   - 原文：https://community.milkv.io/t/arch-linux-on-milkv-duo-milkv-duo-arch-linux/329
   - 测试文档：https://github.com/jason-hue/plct/blob/main/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/%E5%9C%A8Milk-V%20Duo%20256MB%E5%BC%80%E5%8F%91%E6%9D%BF%E4%B8%8A%E8%BF%90%E8%A1%8CArch%20Linux%E7%B3%BB%E7%BB%9F.md
-  - 视频：还未发布，暂无链接
+  - 视频：https://www.bilibili.com/video/BV1j8yyYTEp2/?spm_id_from=333.999.0.0&vd_source=8a52ecadc475c2b9b4199b8c93eaaf6f
 
 - ###### 在Milk-V Duo上使用Rust：
 
