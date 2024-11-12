@@ -9,13 +9,27 @@
 
 2. 安装 box64，参考 [COMPILE.md](https://github.com/ptitSeb/box64/blob/main/docs/COMPILE.md#for-risc-v)。
 
+   ```bash
+   git clone https://github.com/ptitSeb/box64.git
+   cd box64
+   mkdir build
+   cd build
+   cmake .. -D RV64=1 -D CMAKE_BUILD_TYPE=RelWithDebInfo
+   make -j$(nproc)
+   sudo make install
+   ```
+
+   
+
 3. 安装 [gl4es](https://github.com/ptitSeb/gl4es)：
 
    ```
    git clone https://github.com/ptitSeb/gl4es
    cd gl4es
-   mkdir build; cd build; cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo;
-   make
+   mkdir build
+   cd build 
+   cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo
+   make -j$(nproc)
    ```
 
 4. 购买Baby Is You，下载 Linux 版
