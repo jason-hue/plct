@@ -43,7 +43,7 @@ Which would you like:
 
 
 
-检测的示例程序为 `sample_vi_od`，进入到 sample_vi_fd 目录：
+检测的示例程序为 `sample_vi_od`，进入到 sample_vi_od 目录：
 
 ```
 cd sample_vi_od
