@@ -94,3 +94,4 @@ find /usr /lib /usr/local -name "libvorbis*.so*"
 /usr/lib/riscv64-linux-gnu/libvorbis.so.0
 ```
 
+参考文档：https://wiki.sipeed.com/hardware/zh/lichee/th1520/lpi4a/8_application.html
