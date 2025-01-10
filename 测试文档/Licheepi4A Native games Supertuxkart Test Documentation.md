@@ -23,3 +23,13 @@ After the game starts, it is very laggy. The CPU single core is heavily loaded. 
 ![91a7560d1ea99eb6fe6aa90fece4ae0](https://raw.githubusercontent.com/jason-hue/plct/main/91a7560d1ea99eb6fe6aa90fece4ae0.png)
 
 ![image-20250106165406790](https://raw.githubusercontent.com/jason-hue/plct/main/image-20250106165406790.png)
+
+Received reply:
+
+![image-20250110131532538](https://raw.githubusercontent.com/jason-hue/plct/main/image-20250110131532538.png)
+
+This should be the lowest quality, it's still very laggy, it takes 20 seconds to respond after clicking：
+
+![image](https://raw.githubusercontent.com/jason-hue/plct/main/401471681-e57bf853-00f9-461a-9e87-6a9651a52de1.png)
+
+![image](https://raw.githubusercontent.com/jason-hue/plct/main/401472631-b54bd48f-bc0e-4764-b646-6d8bce2fb301.png)
