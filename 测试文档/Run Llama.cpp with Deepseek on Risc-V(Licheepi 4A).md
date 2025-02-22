@@ -216,6 +216,11 @@ if __name__ == "__main__":
 
 您可能会发现交互式客户端卡半天才回复，这是因为 DeepSeek 会进行大量的思考过程，最后一次性的输出全部内容。请耐心等待。
 
-
+```bash
+cd ~
+python3 -m venv venv
+source venv/bin/activate
+python3 client.py
+```
 
 参考文档：https://github.com/wychlw/plct/blob/main/memo/deepseek_on_llama.cpp.md
