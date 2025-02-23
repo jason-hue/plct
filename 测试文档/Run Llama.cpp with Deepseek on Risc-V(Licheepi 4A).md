@@ -84,7 +84,7 @@ index 98fd18e..0e6f302 100644
 ```bash
 CC=riscv64-plctxthead-linux-gnu-gcc FC=riscv64-plctxthead-linux-gnu-gfortran cmake -B build -DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS
 
-cmake --build build --config Release -j32
+cmake --build build --config Release -j4
 ```
 
 
