@@ -9,7 +9,7 @@
 开始前先安装一下相关依赖：
 
 ```bash
-sudo apt install pkg-config1
+sudo apt install pkg-config
 ```
 
 
