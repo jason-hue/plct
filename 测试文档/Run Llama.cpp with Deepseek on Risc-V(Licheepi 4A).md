@@ -10,8 +10,6 @@
 
 ```bash
 sudo apt install pkg-config1
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source $HOME/.cargo/env #由于 hf_transfer 依赖 maturin，而 maturin 需要 Rust 编译器.
 ```
 
 
