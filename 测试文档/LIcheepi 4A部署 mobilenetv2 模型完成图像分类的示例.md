@@ -97,7 +97,7 @@ export PATH=/tools/Xuantie-900-gcc-linux-5.10.4-glibc-x86_64-V2.6.1-light.1/bin/
 
 至此，HHB 环境初步搭建完成。
 
-### 部署MobilenertV2
+### 部署MobilenetV2
 
 进入docker中
 
