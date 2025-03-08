@@ -15,7 +15,7 @@
 首先获取模型，本教程中使用的模型来自 google bert 仓库，已转换成 onnx 版本的 BERT 模型，可以用如下命令下载到 `/home/example/c920/bert_small` 目录下:
 
 ```bash
-cd home/example/c920/bert_small
+cd /home/example/c920/bert_small
 
 wget https://github.com/zhangwm-pt/bert/releases/download/onnx/bert_small_int32_input.onnx
 ```
