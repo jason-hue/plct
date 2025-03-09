@@ -189,3 +189,5 @@ The std_value of output: 4.820137
 ```
 
 这样，你就成功在 **Licheepi4A 开发板** 上运行了 **BERT 量化推理**！🚀
+
+参考文档：https://wiki.sipeed.com/hardware/zh/lichee/th1520/lpi4a/8_application.html
