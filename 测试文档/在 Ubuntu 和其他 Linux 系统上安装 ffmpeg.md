@@ -149,8 +149,8 @@ ffmpeg -i video_input.mp4 -an -video_output.mp4
 
 这个功能可能对很多人都挺有用，比如你可能有一些幻灯片，你想从里面提取所有的图片，那么下面这个命令就能帮你：
 
-```c
-ffmpeg -i video.mp4 -r 1 -f image2 image-%3d.png
+```bash
+ffmpeg -i video_file.mp4 -r 1 -f image2 images/image-%3d.png
 ```
 
 我们来解释一下这个命令：
@@ -189,13 +189,11 @@ ffmpeg -i video_input.mp4 -aspect 4:3 video_output.mp4
 
 下面是例子：
 
-```c
-ffmpeg -loop 1 -i image.jpg -i audio.wav -c:v libx264 -c:a aac -strict experimental -b:a 192k -shortest output.mp4
+```bash
+ffmpeg -loop 1 -i image.png -i audio_file.mp3 -c:v libx264 -tune stillimage -c:a aac -b:a 192k -pix_fmt yuv420p -shortest output.mp4
 ```
 
 只要改一下编码设置 (**-c:v** 是 视频编码， **-c:a** 是音频编码) 和文件的名称就能用了。
-
-**Note:** *如果你使用一个较新的ffmpeg版本（4.x），你就可以不指定 **-strict experimental***
 
 ### 8. 压缩媒体文件
 
@@ -214,7 +212,7 @@ ffmpeg -i audio_input.mp3 -b:a 192k audio_output.mp3
 
 对于视频文件，选项就多了，一个简单的方法是通过降低视频比特率 (通过 **-b:v**):
 
-```c
+```bash
 ffmpeg -i video_input.mp4 -b:v 1000k -bufsize 1000k video_output.mp4
 ```
 
@@ -231,10 +229,10 @@ ffmpeg -i video_input.mp4 -c:v libx264 -crf 28 video_output.mp4
 降低帧率在有些情况下也能有效（不过这往往让视频看起来很卡）:
 
 ```c
-ffmpeg -i video_input.mp4 -r 24 video_output.mp4
+ffmpeg -i video_input.mp4 -r 5 video_output.mp4
 ```
 
-**-r** 指示了帧率 (这里是 **24**)。
+**-r** 指示了帧率 (这里是 **5**)。
 
 你还可以通过压缩音频来降低视频文件的体积，比如设置为立体声或者降低比特率：
 
@@ -249,8 +247,8 @@ ffmpeg -i video_input.mp4 -c:v libx264 -ac 2 -c:a aac -strict -2 -b:a 128k -crf 
 想要从开头开始剪辑一部分，使用T **-t** 参数来指定一个时间:
 
 ```c
-ffmpeg -i input_video.mp4 -t 5 output_video.mp4 
-ffmpeg -i input_audio.wav -t 00:00:05 output_audio.wav
+ffmpeg -i input_video.mp4 -t 1 output_video.mp4 
+ffmpeg -i input_audio.wav -t 00:00:01 output_audio.wav
 ```
 
 这个参数对音频和视频都适用，上面两个命令做了类似的事情：保存一段5s的输出文件（文件开头开始算）。上面使用了两种不同的表示时间的方式，一个单纯的数字（描述）或者 **HH:MM:SS** (小时, 分钟, 秒). 第二种方式实际上指示了结束时间。
@@ -278,11 +276,11 @@ ffmpeg -i input_audio.ogg -ss 5 output_audio.ogg
 
 看下面这个例子：
 
-```c
-ffmpeg -i video.mp4 -t 00:00:30 video_1.mp4 -ss 00:00:30 video_2.mp4
+```bash
+ffmpeg -i video_file.mp4 -t 00:00:02 video_1.mp4 -ss 00:00:02 video_file.mp4
 ```
 
-语法很简单，为第一个文件指定了 **-t 00:00:30** 作为持续时间（第一个部分是原始文件的前30秒内容），然后指定接下来的所有内容作为第二个文件（从第一部分的结束时间开始，也就是 **00:00:30**)。
+语法很简单，为第一个文件指定了 **-t 00:00:02** 作为持续时间（第一个部分是原始文件的前2秒内容），然后指定接下来的所有内容作为第二个文件（从第一部分的结束时间开始，也就是 **00:00:02**)。
 
 你可以任意指定多少个部分，尝试一下吧，这个功能真的很厉害，同时它也适用用音频文件。
 
@@ -309,9 +307,9 @@ vim videos_to_join.txt
 在文件内容中, 输入您想拼接的文件的完整路径（文件会按照顺序拼合在一起），一行一个文件。确保他们拥有相同的后缀名。下面是我的例子：
 
 ```bash
-video_1.mp4
-video_2.mp4
-video_3.mp4
+file 'video1.mp4'
+file 'video2.mp4'
+file 'video3.mp4'
 ```
 
 保存这个文件，同样这个方法适用与任何音频或者视频文件。
@@ -319,7 +317,7 @@ video_3.mp4
 然后使用下面的命令：
 
 ```bash
-ffmpeg -f concat -i join.txt output.mp4
+ffmpeg -f concat -i videos_to_join.txt output.mp4
 ```
 
 **Note:** *使用的输出文件的名称是 **output.mp4**, 因为我的输入文件都是mp4的 。*
@@ -330,12 +328,12 @@ ffmpeg -f concat -i join.txt output.mp4
 
 这会告诉你如何将图片变成幻灯片秀，同时也会告诉你如何加上音频。
 
-首先我建议您将所有的图片放到一个文件夹下面，我把它们放到了 **my_photos** 里，同时图片的后缀名最好是 **.png** 或者 **.jpg**， 不管选那个，他们应该是同一个后缀名，否则ffmpeg可能会工作的不正常，您可以很方便的把 .png 转变为 .jpg （或者倒过来也行）。
+首先我建议您将所有的图片放到一个文件夹下面，我把它们放到了 **images** 里，同时图片的后缀名最好是 **.png** 或者 **.jpg**， 不管选那个，他们应该是同一个后缀名，否则ffmpeg可能会工作的不正常，您可以很方便的把 .png 转变为 .jpg （或者倒过来也行）。
 
 我们这次转换的格式 (**-f**) 应该被设置为 **image2pipe**. 你必须使用使用连词符(**–**)来指明输入。 **image2pipe** 允许你使用管道 (在命令间使用 **|**)的结果而不是文件作为ffmpeg的输入。命令结果便是将所有图片的内容逐个输出，还要注意指明视频编码器是 copy (**-c:v copy**) 以正确使用图片输入：
 
 ```bash
-cat my_photos/* | ffmpeg -f image2pipe -i - -c:v copy video.mkv
+cat images/* | ffmpeg -f image2pipe -i - -c:v copy video.mkv
 ```
 
 如果你播放这个文件，你可能会觉得只有一部分图片被加入了，事实上所有的图片都在，但是**ffmpeg** 播放它们的时候太快了，默认是23fps，一秒播放了23张图片。
@@ -343,15 +341,15 @@ cat my_photos/* | ffmpeg -f image2pipe -i - -c:v copy video.mkv
 你应该指定帧率 (**-framerate**) :
 
 ```bash
-cat my_photos/* | ffmpeg -framerate 1 -f image2pipe -i - -c:v copy video.mkv 
+cat images/* | ffmpeg -framerate 1 -f image2pipe -i - -c:v copy video.mkv 
 ```
 
 在这个例子里，把帧率设置为1，也就是每帧（每张图）会显示1秒。
 
-为了加一些声音，可以使用音频文件作为输入 (**-i audo_file**) 并且设定copy音频编码 (**-c:a copy**). 你可以同时为音频和视频设定编码器，在输出文件前设置就可以了。你要计算一下音频文件的长度和图片张数，已确定合适的帧率。比如我的音频文件是22秒，图片有9张，那么帧率应该是 9 / 22 大约0.4，所以我这么输入命令：
+为了加一些声音，可以使用音频文件作为输入 (**-i audo_file**) 并且设定copy音频编码 (**-c:a copy**). 你可以同时为音频和视频设定编码器，在输出文件前设置就可以了。你要计算一下音频文件的长度和图片张数，已确定合适的帧率。比如我的音频文件是5秒，图片有7张，那么帧率应该是 7 / 5 大约1.40s，所以我这么输入命令：
 
 ```bash
-cat my_photos/* | ffmpeg -framerate 0.40 -f image2pipe -i - -i audio.wav -c copy video.mkv
+cat images/* | ffmpeg -framerate 1.40 -f image2pipe -i - -i audio_file.mp3 -c copy video.mkv
 ```
 
 
