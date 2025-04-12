@@ -415,3 +415,4 @@ scp -O root@192.168.42.1:/mnt/tpu/cvitek_tpu_sdk/yolov5n_out.jpg .
 
 ![duo](https://raw.githubusercontent.com/jason-hue/plct/main/duo-tpu-yolo5_14-711058f471159efc5c21c8ff11efa61e.jpg)
 
+##### 参考文档：https://milkv.io/zh/docs/duo/application-development/tpu/tpu-yolov5
