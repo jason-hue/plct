@@ -141,13 +141,21 @@ V2 版本 SDK 加入了对 Duo256M 和 DuoS 的 ARM 核的支持，编译方法�
 ##### 安装编译依赖的工具包
 
 ```bash
-sudo apt install -y pkg-config build-essential ninja-build automake autoconf libtool wget curl git gcc libssl-dev bc slib squashfs-tools android-sdk-libsparse-utils jq python3-distutils scons parallel tree python3-dev python3-pip device-tree-compiler ssh cpio fakeroot libncurses5 flex bison libncurses5-dev genext2fs rsync unzip dosfstools mtools tcl openssh-client cmake expect python-is-python3
+sudo apt update
+sudo apt install -y \
+  pkg-config build-essential ninja-build automake autoconf libtool \
+  wget curl git gcc libssl-dev bc squashfs-tools android-sdk-libsparse-utils \
+  jq scons parallel tree python3-dev python3-pip device-tree-compiler ssh \
+  cpio fakeroot libncurses-dev flex bison genext2fs rsync unzip dosfstools \
+  mtools tcl openssh-client cmake expect python-is-python3 python3-venv
 ```
 
 对于 [duo-buildroot-sdk-v2](https://github.com/milkv-duo/duo-buildroot-sdk-v2)，还需要安装以下工具包：
 
 ```bash
-sudo pip install jinja2
+python3 -m venv venv
+source venv/bin/activate
+pip install jinja2
 ```
 
 ##### 获取 SDK
