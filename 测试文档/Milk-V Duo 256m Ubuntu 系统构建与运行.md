@@ -286,7 +286,19 @@ bash device/gen_burn_image_sd.sh install/soc_cv1812cp_milkv_duo256m_sd
 
 
 
-*在defconfig cv1812cp_milkv_duo256m_sd出现问题：*![image-20250703232022257](https://raw.githubusercontent.com/jason-hue/plct/main/image-20250703232022257.png)
+*在defconfig cv1812cp_milkv_duo256m_sd出现问题：*
+
+![image-20250703232022257](https://raw.githubusercontent.com/jason-hue/plct/main/image-20250703232022257.png)
+
+#### 更新：
+
+不使用ZSH，使用bash成功解决上述问题，但是出现新问题：
+
+![](https://raw.githubusercontent.com/jason-hue/plct/main/image-20250704130417259.png)
+
+重新编译会出现这个问题：（我在Ubuntu全新Docker环境下编译也会出现这个问题）
+
+![image-20250704130319222](https://raw.githubusercontent.com/jason-hue/plct/main/image-20250704130319222.png)
 
 
 
