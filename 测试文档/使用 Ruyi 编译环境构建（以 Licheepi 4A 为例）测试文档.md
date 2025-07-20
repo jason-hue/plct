@@ -119,3 +119,7 @@ make PORT_DIR=linux64 link
 ```
 
 ![image-20250718002447749](https://raw.githubusercontent.com/jason-hue/plct/main/image-20250718002447749.png)
+
+#### 更新
+
+将RuyiSDK更新到最新版本即可解决问题，文档给出的版本太老了
