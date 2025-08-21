@@ -7,6 +7,7 @@
 - 工具链：`gnu-plct` (由 Ruyi 提供)
 - C 编译器：`riscv64-plct-linux-gnu-gcc 16.0.0`
 - CMake：使用 SDL3 子项目
+- 参考文献：https://ruyisdk.org/docs/Package-Manager/cases/case5
 
 ------
 
