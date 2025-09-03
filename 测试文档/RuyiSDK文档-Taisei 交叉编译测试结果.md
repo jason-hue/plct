@@ -177,3 +177,7 @@ meson.build:199:18: ERROR: Dependency 'sdl3' is required but not found.
 A full log can be found at /home/knifefire/milkv/taisei/build/meson-logs/meson-log.txt
 ```
 
+
+
+*相关回复*：https://ruyisdk.cn/t/topic/1147
+
