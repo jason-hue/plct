@@ -19,3 +19,5 @@
 没有出现预期的选择Profile
 
 ![image-20260110153837810](https://raw.githubusercontent.com/jason-hue/plct/main/image-20260110153837810.png)
+
+update：必须先选择工作区后才能添加预置虚拟环境
